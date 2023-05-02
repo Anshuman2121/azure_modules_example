@@ -1,12 +1,3 @@
-# Azure Modules Example
-
-This example demonstrates how to call modules from the [azure_modules_example](https://github.com/Anshuman2121/azure_modules_example.git) repository to create an Azure virtual network, virtual machine, and storage account.
-
-## Usage
-
-In your root `main.tf` file, call the modules as shown below:
-
-```terraform
 module "virtual_network" {
   source = "github.com/Anshuman2121/azure_modules_example.git//vnet"
   virtual_network_name = "myVNet"
@@ -40,5 +31,3 @@ module "storage_account" {
   account_tier            = "Standard"
   account_replication_type = "LRS"
 }
-```
-
