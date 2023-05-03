@@ -23,6 +23,7 @@ module "virtual_machine" {
     sku       = "18.04-LTS"
     version   = "latest"
   }
+  depends_on = [module.virtual_network]
 }
 
 module "storage_account" {
@@ -30,4 +31,5 @@ module "storage_account" {
   storage_account_name    = "mystorageaccount"
   account_tier            = "Standard"
   account_replication_type = "LRS"
+  depends_on = [module.virtual_network]
 }
