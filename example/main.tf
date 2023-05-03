@@ -13,7 +13,7 @@ module "virtual_network" {
 module "virtual_machine" {
   source = "github.com/Anshuman2121/azure_modules_example.git//vm"
   vm_size             = "Standard_D2_v2"
-  virtual_network_name = module.virtual_network.virtual_network_name
+  virtual_network_name = "myVNet"
   subnet_name          = "default"
   admin_username       = "adminuser"
   admin_password       = "P@ssw0rd1234!"
